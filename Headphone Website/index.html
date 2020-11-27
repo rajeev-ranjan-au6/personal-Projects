@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Website Design Using Html & Css</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="logo">
+            <h2>Sound</h2>
+        </div>
+        <div id="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div id="find">
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="sideImg">
+            <img src="assets/headphone1.jpg" alt="" id="mainImg">
+        </div>
+        <div id="content">
+            <h2><b>3D</b> Audio</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam pariatur voluptate dolore voluptas, excepturi sint repudiandae ducimus.</p>
+            <h3>$50.00<b>USD</b></h3>
+            <button>Buy Now</button>
+        </div>
+        <div id="socialIcons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+        <div id="changeImg">
+            <div class="sideImg next-Image">
+                <img src="assets/headphone1.jpg" alt="" id="mainImg">
+            </div>
+            <div class="sideImg next-Image">
+                <img src="assets/headphone2.jpg" alt="" id="mainImg">
+            </div>
+            <div class="sideImg next-Image">
+                <img src="assets/headphone3.jpg" alt="" id="mainImg">
+            </div>
+        </div>
+    </div>
+    <script>
+    let next_Image = document.querySelectorAll(".next-Image");
+    let mainImg = document.querySelector("#mainImg");
+        
+        next_Image.forEach(images =>{
+            images.addEventListener("click" , ()=>{
+                mainImg.src = images.firstElementChild.src;
+            })
+        });
+    </script>
+</body>
+
+</html>
